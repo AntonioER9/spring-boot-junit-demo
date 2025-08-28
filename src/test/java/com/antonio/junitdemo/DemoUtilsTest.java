@@ -20,15 +20,15 @@ class DemoUtilsTest {
         System.out.println();
     }
 
-    @BeforeAll
-    static void setupBeforeEachClass(){
-        System.out.println("@BeforeAll executes before all the test methods");
-    }
+//    @BeforeAll
+//    static void setupBeforeEachClass(){
+//        System.out.println("@BeforeAll executes before all the test methods");
+//    }
 
-    @AfterAll
-    static void tearDownAfterAll(){
-        System.out.println("@AfterAll executes after all the test methods");
-    }
+//    @AfterAll
+//    static void tearDownAfterAll(){
+//        System.out.println("@AfterAll executes after all the test methods");
+//    }
 
     @Test
     void testEqualsAndNotEquals() {
@@ -43,5 +43,17 @@ class DemoUtilsTest {
         System.out.println("Running test: testCheckNullWithNull");
         assertNull(demoUtils.checkNull(null), "Should return null when input is null");
     }
+
+    @DisplayName("Same and Not Same")
+    @Test
+    void testSameAndNotSame() {
+
+        String str = "luv2code";
+
+        assertSame(demoUtils.getAcademy(), demoUtils.getAcademyDuplicate(), "Objects should be the same");
+        assertNotSame(str, demoUtils.getAcademy(), "Objects should be the same");
+    }
+
+
 
 }
