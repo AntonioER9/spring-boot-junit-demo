@@ -60,4 +60,12 @@ class DemoUtilsTest {
         String[] stringArray = {"A", "B", "C"};
         assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Arrays should be the same");
     }
+
+    @DisplayName("Throws and Does not throw")
+    @Test
+    void testThrowsAndDoesNotThrow() {
+        assertThrows(Exception.class, () -> {demoUtils.throwException(-1);}, "should throw an exception");
+        assertDoesNotThrow(() -> {demoUtils.throwException(1);}, "should throw an exception");
+    }
+
 }
