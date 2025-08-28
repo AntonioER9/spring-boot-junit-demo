@@ -54,6 +54,10 @@ class DemoUtilsTest {
         assertNotSame(str, demoUtils.getAcademy(), "Objects should be the same");
     }
 
-
-
+    @DisplayName("Array Equals")
+    @Test
+    void testArrayEquals() {
+        String[] stringArray = {"A", "B", "C"};
+        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Arrays should be the same");
+    }
 }
