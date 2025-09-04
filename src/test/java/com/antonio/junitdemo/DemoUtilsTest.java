@@ -20,6 +20,8 @@ class DemoUtilsTest {
     void tearDownAfterEach(){
         System.out.println("@AfterEach executes after the execution of each test method");
         System.out.println();
+
+
     }
 
 //    @BeforeAll
